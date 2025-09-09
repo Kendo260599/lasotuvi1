@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.input-section {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+}
+
+.input-section h2 {
+    color: #764ba2;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.result-section {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.result-section h2 {
+    color: #764ba2;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.chart-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.palace {
+    background: #f8f9fa;
+    border: 2px solid #dee2e6;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.palace:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.palace-name {
+    font-weight: bold;
+    color: #764ba2;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.palace-stars {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.main-star {
+    color: #d63384;
+    font-weight: 600;
+}
+
+.lucky-star {
+    color: #198754;
+}
+
+.unlucky-star {
+    color: #dc3545;
+}
+
+.interpretation {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #764ba2;
+}
+
+.interpretation h3 {
+    color: #764ba2;
+    margin-bottom: 15px;
+}
+
+.interpretation p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.user-info {
+    background: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.user-info h3 {
+    color: #1976d2;
+    margin-bottom: 10px;
+}
+
+/* Special palaces positioning */
+.palace.menh { grid-area: 2 / 2 / 3 / 3; background: #fff3cd; border-color: #ffc107; }
+.palace.phu-mau { grid-area: 1 / 2 / 2 / 3; }
+.palace.phuc-duc { grid-area: 1 / 3 / 2 / 4; }
+.palace.dien-trach { grid-area: 1 / 4 / 2 / 5; }
+.palace.quan-loc { grid-area: 2 / 4 / 3 / 5; }
+.palace.no-boc { grid-area: 3 / 4 / 4 / 5; }
+.palace.thien-di { grid-area: 3 / 3 / 4 / 4; }
+.palace.giao-du { grid-area: 3 / 2 / 4 / 3; }
+.palace.tat-ach { grid-area: 3 / 1 / 4 / 2; }
+.palace.tai-bach { grid-area: 2 / 1 / 3 / 2; }
+.palace.tu-tu { grid-area: 1 / 1 / 2 / 2; }
+.palace.phu-the { grid-area: 2 / 3 / 3 / 4; }
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .chart-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+    
+    .palace.menh { grid-area: auto; }
+    .palace.phu-mau { grid-area: auto; }
+    .palace.phuc-duc { grid-area: auto; }
+    .palace.dien-trach { grid-area: auto; }
+    .palace.quan-loc { grid-area: auto; }
+    .palace.no-boc { grid-area: auto; }
+    .palace.thien-di { grid-area: auto; }
+    .palace.giao-du { grid-area: auto; }
+    .palace.tat-ach { grid-area: auto; }
+    .palace.tai-bach { grid-area: auto; }
+    .palace.tu-tu { grid-area: auto; }
+    .palace.phu-the { grid-area: auto; }
+}
