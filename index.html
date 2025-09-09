@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lá Số Tử Vi Truyền Thống</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔮 Lá Số Tử Vi Truyền Thống Việt Nam</h1>
+            <p>Ứng dụng xem lá số tử vi theo truyền thống Việt Nam</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <h2>Nhập Thông Tin Sinh</h2>
+                <form id="birth-form">
+                    <div class="form-group">
+                        <label for="name">Họ và tên:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="gender">Giới tính:</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Chọn giới tính</option>
+                            <option value="nam">Nam</option>
+                            <option value="nu">Nữ</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="day">Ngày sinh:</label>
+                            <input type="number" id="day" name="day" min="1" max="31" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="month">Tháng sinh:</label>
+                            <input type="number" id="month" name="month" min="1" max="12" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="year">Năm sinh:</label>
+                            <input type="number" id="year" name="year" min="1900" max="2100" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="hour">Giờ sinh:</label>
+                            <input type="number" id="hour" name="hour" min="0" max="23" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="minute">Phút sinh:</label>
+                            <input type="number" id="minute" name="minute" min="0" max="59" value="0">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="lunar-calendar" name="lunar-calendar">
+                            Ngày sinh theo âm lịch
+                        </label>
+                    </div>
+                    
+                    <button type="submit">Xem Lá Số Tử Vi</button>
+                </form>
+            </div>
+
+            <div id="result-section" class="result-section" style="display: none;">
+                <h2>Lá Số Tử Vi</h2>
+                <div id="chart-container" class="chart-container">
+                    <!-- Astrology chart will be generated here -->
+                </div>
+                <div id="interpretation" class="interpretation">
+                    <!-- Fortune interpretation will be displayed here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="lunar-calendar.js"></script>
+    <script src="astrology.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
